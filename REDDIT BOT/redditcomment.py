@@ -5,11 +5,11 @@ from serpapi import GoogleSearch
 import time
 
 reddit = praw.Reddit(
-        client_id='x9uNAt3civEeZ5UQfAFPig',
-        client_secret='NsWvxUA_7oIae_euucgi9zye_-7wxA',
-        user_agent='<console:rolandbbosa:1.0>',
-        username='rolandbbosa',
-        password='martinlking@2005'
+        client_id='example',
+        client_secret='example',
+        user_agent='<console:example:1.0>',
+        username='example',
+        password='example'
     )
 
     
