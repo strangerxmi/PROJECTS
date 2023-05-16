@@ -5,11 +5,11 @@ from serpapi import GoogleSearch
 import time
 
 reddit = praw.Reddit(
-        client_id='x9uNAt3civEeZ5UQfAFPig',
-        client_secret='NsWvxUA_7oIae_euucgi9zye_-7wxA',
-        user_agent='<console:rolandbbosa:1.0>',
-        username='rolandbbosa',
-        password='martinlking@2005'
+        client_id='example',
+        client_secret='example',
+        user_agent='<console:example:1.0>',
+        username='example',
+        password='example'
     )
 
     
@@ -47,18 +47,18 @@ def comment_on_reddit():
                 if "what" or "who" or "where" or "when" or "?" in comment_lower:
                     recepient = comment.body
                     params = {
-                            "api_key": "778f1f126087a8dc715cd307bc5c5a827a1358594568299790e100adc6cc0b60",
+                            "api_key": "example",
                             "engine": "google",
                             "q": recepient,
                             }
                     search = GoogleSearch(params)
                     answer = search.get_dict()
-
-                    answer = results['answer_box']['answer']
+                    answer = answer['answer_box']['answer']
                     print('----------(0_0)---------')
-                    print(recepient)
+                    print(f'COMMENT: {recepient}')
+                    print('')
+                    print(f'ANSWER: {answer}')
                     comment.reply(answer)
-                    print(answer)
                     break
 
     time.sleep(660)
